@@ -38,7 +38,7 @@ jobs:
           ls
           pwd
           cd pact/bin
-          ./pact-provider-verifier --provider-base-url=$PACT_PROVIDER_BASE_URL --pact-broker-base-url=$PACT_BROKER_URL --broker-username=$PACT_BROKER_USERNAME --broker-password=$PACT_BROKER_PASSWORD --provider-version-branch=PACT_PROVIDER_VERSION_BRANCH --provider=$PACT_PROVIDER --provider-app-version=$PACT_PROVIDER_APP_VERSION --publish-verification-results --tag-with-git-branch=true 
+          ./pact-provider-verifier --provider-base-url=$PACT_PROVIDER_BASE_URL --pact-broker-base-url=$PACT_BROKER_URL --broker-username=$PACT_BROKER_USERNAME --broker-password=$PACT_BROKER_PASSWORD --provider-version-branch=$PACT_PROVIDER_VERSION_BRANCH --provider=$PACT_PROVIDER --provider-app-version=$PACT_PROVIDER_APP_VERSION --publish-verification-results --tag-with-git-branch=true 
           cd ..
         env:
           PACT_CONSUMER: "BallerinaClient"
@@ -49,4 +49,3 @@ jobs:
           PACT_PROVIDER_VERSION_BRANCH: "main"
           PACT_PROVIDER: BallerinaProvider
           PACT_PROVIDER_APP_VERSION: 0.1.1
-
