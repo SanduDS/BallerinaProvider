@@ -25,7 +25,7 @@ service / on new http:Listener(9090) {
     }
 
     resource function get hello() returns json {
-        json body = {"message":"Hello world bro"};
+        json body = {"message":"Hello world"};
         return body;
     }
 }
