@@ -32,7 +32,7 @@ jobs:
 
       - name: Install Pact Verifier & Run
         run: |
-          # Install the Pact Mock Server
+          # Install the Pact Verfier
           curl -LO https://github.com/pact-foundation/pact-ruby-standalone/releases/download/v2.0.10/pact-2.0.10-linux-x86_64.tar.gz
           tar xzf pact-2.0.10-linux-x86_64.tar.gz
           ls
@@ -48,5 +48,5 @@ jobs:
           PACT_BROKER_PASSWORD: ${{ secrets.PACT_BROKER_PASSWORD }}
           PACT_PROVIDER_VERSION_BRANCH: "main"
           PACT_PROVIDER: BallerinaProvider
-          PACT_PROVIDER_APP_VERSION: 0.1.0
+          PACT_PROVIDER_APP_VERSION: 0.1.1
 

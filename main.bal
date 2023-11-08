@@ -16,8 +16,16 @@ service / on new http:Listener(9090) {
         return newGreeting;
     }
 
-        resource function get hello() returns json {
-        json body = {"message":"Hello world"};
+    resource function get hi/[string name]() returns Greeting {
+        Greeting newGreeting = {
+            name: name,
+            greeting: "hi! " + name
+        };
+        return newGreeting;
+    }
+
+    resource function get hello() returns json {
+        json body = {"message":"Hello world bro"};
         return body;
     }
 }
