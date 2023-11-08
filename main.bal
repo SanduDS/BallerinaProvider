@@ -19,7 +19,7 @@ service / on new http:Listener(9090) {
     resource function get hi/[string name]() returns Greeting {
         Greeting newGreeting = {
             name: name,
-            greeting: "hi! " + name
+            greeting: "hi! "
         };
         return newGreeting;
     }
