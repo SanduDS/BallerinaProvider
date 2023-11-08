@@ -28,9 +28,7 @@ jobs:
           JAVA_HOME: /usr/lib/jvm/default-jvm
 
       - name: Run Ballerina Provider Service
-        run: bal run
-        env:
-          PACT_MOCK_SERVER_PORT: 1234
+        run: bal run &
 
       - name: Install Pact Verifier & Run
         run: |
@@ -40,7 +38,7 @@ jobs:
           ls
           pwd
           cd pact/bin
-          pact-provider-verifier --provider-base-url=$PACT_PROVIDER_BASE_URL --pact-broker-base-url=$PACT_BROKER_URL --broker-username=$PACT_BROKER_USERNAME --broker-password=$PACT_BROKER_PASSWORD --provider-version-branch=PACT_PROVIDER_VERSION_BRANCH --provider=$PACT_PROVIDER --provider-app-version=$PACT_PROVIDER_APP_VERSION --publish-verification-results
+          ./pact-provider-verifier --provider-base-url=$PACT_PROVIDER_BASE_URL --pact-broker-base-url=$PACT_BROKER_URL --broker-username=$PACT_BROKER_USERNAME --broker-password=$PACT_BROKER_PASSWORD --provider-version-branch=PACT_PROVIDER_VERSION_BRANCH --provider=$PACT_PROVIDER --provider-app-version=$PACT_PROVIDER_APP_VERSION --publish-verification-results
           cd ..
         env:
           PACT_CONSUMER: "BallerinaClient"
