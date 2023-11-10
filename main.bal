@@ -7,7 +7,7 @@ type Greeting readonly & record {|
 
 service / on new http:Listener(9090) {
     resource function get hi/[string name]() returns json {
-        string greet = "hi " + name;
+        string greet = "Hi " + name;
         json body = {"message": greet};
         return body;
     }
