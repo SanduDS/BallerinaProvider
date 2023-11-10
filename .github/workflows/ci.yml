@@ -48,4 +48,4 @@ jobs:
           PACT_BROKER_PASSWORD: ${{ secrets.PACT_BROKER_PASSWORD }}
           PACT_PROVIDER_VERSION_BRANCH: "master"
           PACT_PROVIDER: BallerinaProvider
-          PACT_PROVIDER_APP_VERSION: 0.1.3
+          PACT_PROVIDER_APP_VERSION: 0.1.4
