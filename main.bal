@@ -16,4 +16,10 @@ service / on new http:Listener(9090) {
         json body = {"message":"Hello world"};
         return body;
     }
+
+    resource function get welcome/[string name]() returns json {
+        string greet = "welcome " + name;
+        json body = {"message": greet};
+        return body;
+    }
 }
