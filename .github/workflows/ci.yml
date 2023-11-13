@@ -61,7 +61,7 @@ jobs:
 
       - name: Can I deploy to development environment
         run: |
-          cd pact/bin \
+          cd pact/bin
           ./pact-broker can-i-deploy \
             -a=BallerinaProvider \
             -b=$PACT_BROKER_URL \
