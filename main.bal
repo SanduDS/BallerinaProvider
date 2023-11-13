@@ -1,25 +1,15 @@
 import ballerina/http;
 
-type Greeting readonly & record {|
+type User readonly & record {|
     string name;
-    string greeting;
+    string id;
+    string orgId;
+    string orgHandle;
 |};
 
 service / on new http:Listener(9090) {
-    resource function get hi/[string name]() returns json {
-        string greet = "Hi " + name;
-        json body = {"message": greet};
-        return body;
-    }
-
-    resource function get hello() returns json {
-        json body = {"message":"Hello worl"};
-        return body;
-    }
-
-    resource function get welcome/[string name]() returns json {
-        string greet = "welcome " + name;
-        json body = {"message": greet};
-        return body;
+    resource function get user/[string id]() returns json {
+        User[] result = users.filter(user=>user.id == id);
+        return result.first();
     }
 }

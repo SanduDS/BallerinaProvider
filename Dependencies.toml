@@ -282,13 +282,13 @@ modules = [
 
 [[package]]
 org = "dhanushkas"
-name = "BallerinaProviderV2"
+name = "UserManagamentService"
 version = "0.1.0"
 dependencies = [
 	{org = "ballerina", name = "http"},
 	{org = "ballerinai", name = "observe"}
 ]
 modules = [
-	{org = "dhanushkas", packageName = "BallerinaProviderV2", moduleName = "BallerinaProviderV2"}
+	{org = "dhanushkas", packageName = "UserManagamentService", moduleName = "UserManagamentService"}
 ]
 

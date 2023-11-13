@@ -27,7 +27,7 @@ jobs:
         env:
           JAVA_HOME: /usr/lib/jvm/default-jvm
 
-      - name: Run Ballerina Provider Service
+      - name: Run Ballerina Provider Service - User Management
         run: bal run &
 
       - name: Install Pact Verifier & Run
