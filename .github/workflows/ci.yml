@@ -80,8 +80,8 @@ jobs:
       
       - name: Update pact broker
         run: |
-          cd pact/bin \
-            ./pact-broker record-deployment \
+          cd pact/bin
+          ./pact-broker record-deployment \
             --environment=dev \
             -a=BallerinaProvider \
             --version=0.1.0 \ 
