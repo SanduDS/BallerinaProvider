@@ -9,7 +9,7 @@ type User readonly & record {|
 
 service / on new http:Listener(9090) {
     resource function get user/[string id]() returns json {
-        return users.filter(user=>user.id == id).pop();
+        return users.filter(user=>user.id == id)[0];
     }
 
     resource function get user/orghandler/[string id]() returns json {
