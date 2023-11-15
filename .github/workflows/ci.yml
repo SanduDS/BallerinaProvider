@@ -49,8 +49,7 @@ jobs:
             --provider=$PACT_PROVIDER \
             --provider-app-version=$APP_VERSION \
             --publish-verification-results \
-            --tag-with-git-branch=true 
-            --no-fail-if-no-pacts-found=true
+            --tag-with-git-branch=true
           cd ..
         env:
           PACT_CONSUMER: "BallerinaClient"
