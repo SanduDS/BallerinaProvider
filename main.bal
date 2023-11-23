@@ -18,6 +18,12 @@ service / on new http:Listener(9090) {
         return orghandle;
     }
 
+    // resource function get user/orghandler/[string id]() returns json {
+    //     string result =  users.filter(user=>user.id == id)[0].orgHandle;
+    //     json orghandle = {orghandle: result};
+    //     return orghandle;
+    // }
+
     resource function get user/name/[string id]() returns json {
         string result =  users.filter(user=>user.id == id)[0].orgHandle;
         json orghandle = {orghandle: result};
